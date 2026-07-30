@@ -1,9 +1,9 @@
 import * as THREE from "three";
 
-const ORANGE = 0xe85d04;
-const YELLOW = 0xfbbf24;
-const CREAM = 0xf5f0e8;
-const NAVY = 0x1e293b;
+const TEAL = 0x0d9488;
+const TEAL_LIGHT = 0x5eead4;
+const CREAM = 0xf0ebe3;
+const NAVY = 0x0c1222;
 
 export class HouseScene {
   private container: HTMLElement;
@@ -73,7 +73,7 @@ export class HouseScene {
     group.add(body);
 
     const roofGeo = new THREE.ConeGeometry(1.85, 1.1, 4);
-    const roofMat = new THREE.MeshStandardMaterial({ color: ORANGE, roughness: 0.45, metalness: 0.05 });
+    const roofMat = new THREE.MeshStandardMaterial({ color: TEAL, roughness: 0.4, metalness: 0.08 });
     const roof = new THREE.Mesh(roofGeo, roofMat);
     roof.position.y = 2.35;
     roof.rotation.y = Math.PI / 4;
@@ -87,9 +87,9 @@ export class HouseScene {
     group.add(door);
 
     const windowMat = new THREE.MeshStandardMaterial({
-      color: YELLOW,
-      emissive: YELLOW,
-      emissiveIntensity: 0.25,
+      color: TEAL_LIGHT,
+      emissive: TEAL_LIGHT,
+      emissiveIntensity: 0.2,
       roughness: 0.3,
     });
 
@@ -171,7 +171,7 @@ export class HouseScene {
     sun.shadow.camera.bottom = -6;
     this.scene.add(sun);
 
-    const fill = new THREE.DirectionalLight(0xfbbf24, 0.35);
+    const fill = new THREE.DirectionalLight(0x5eead4, 0.4);
     fill.position.set(-4, 3, -2);
     this.scene.add(fill);
   }
