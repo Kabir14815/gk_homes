@@ -81,7 +81,7 @@ export function ProjectsPage() {
               <div className="reveal">
                 <HouseCanvas id="viz-canvas" large label="Interactive 3D house visualization" />
               </div>
-              <p className="canvas-hint canvas-hint-center">Drag to rotate the 3D model</p>
+              <p className="canvas-hint canvas-hint-center">Drag to explore the real 3D model</p>
               <div className="project-grid project-grid-spaced">
                 {PROJECTS_3D.map((p) => (
                   <ProjectCard key={p.id} project={p} variant="3d" />
